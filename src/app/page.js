@@ -134,7 +134,7 @@ export default function Home() {
                     <span className="text-brown">canvas and wood</span>{" "}
                     furniture pieces. We take pride in providing a diverse
                     selection of top-notch furniture and home decor products,
-                    tailored to your preferences. Whether you're searching for a
+                    tailored to your preferences. Whether youre searching for a
                     captivating canvas sofa, a sturdy wooden dining table, a
                     luxurious bedroom set, or any other furniture item, our
                     collection has something to complement your style and
@@ -142,12 +142,13 @@ export default function Home() {
                     tirelessly curates the latest trends and ensures that each
                     product meets our stringent quality standards. We are
                     committed to offering affordability without compromising on
-                    the excellence of our merchandise. Don't miss out on the
+                    the excellence of our merchandise. Dont miss out on the
                     chance to transform your living space into a haven of
                     comfort and style. Take advantage of these incredible offers
                     now and embark on the journey of crafting your dream home!
                     Shop with us today and unlock a world of possibilities for
                     your home decor and furniture needs.
+                    
                 </p>
             </div>
             <Footer/>
