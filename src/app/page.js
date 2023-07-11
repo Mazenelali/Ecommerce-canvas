@@ -148,6 +148,7 @@ export default function Home() {
                     now and embark on the journey of crafting your dream home!
                     Shop with us today and unlock a world of possibilities for
                     your home decor and furniture needs.
+                    
                 </p>
             </div>
             <Footer/>
