@@ -22,14 +22,16 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "aos/dist/aos.js";
 import {BsArrowRight} from "react-icons/bs"
+import { useEffect } from "react";
 
 export default function Home() {
+    useEffect(()=>{
     Aos.init({
         easing: "ease-out",
         duration: 600,
         once: false,
     });
-
+})
 
 
     const imagesOfCategory = [
@@ -114,7 +116,6 @@ export default function Home() {
                                     <Image
                                         src={ele.image}
                                         width={256}
-                                        objectFit="cover"
                                         alt={ele.caption}
                                     />
                                 </div>
