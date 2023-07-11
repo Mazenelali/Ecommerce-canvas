@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,6 +13,18 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors:{
+        brown :"#C19458",
+        DarkBrown:'#94693f',
+        black :"#000000"
+      },
+      backgroundImage: {
+        'background-room': "url('./src/assest/background.png')",
+      },
+      screens:{
+        'sm': '400px',
+        'md': '768px',
+      }
     },
   },
   plugins: [],

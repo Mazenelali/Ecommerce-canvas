@@ -1,0 +1,50 @@
+#background{
+    background-image: url(../assest/background.png);
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 1300px;
+    object-fit: cover;
+}
+
+/* #sofa {
+    animation: sofa 1s ease-out ;
+    -webkit-transition: all 1s cubic-bezier(0.09, 0.25, 0.33, 0.78);
+    transition: all 1s cubic-bezier(0.09, 0.25, 0.33, 0.78);
+}
+#lamp{
+    animation: lamp 1s ease-out ;
+    -webkit-transition: all 1s cubic-bezier(0.09, 0.25, 0.33, 0.78);
+    transition: all 1s cubic-bezier(0.09, 0.25, 0.33, 0.78);
+}
+#vase{
+    animation: vase 1s ease-out ;
+    -webkit-transition: all 1s cubic-bezier(0.09, 0.25, 0.33, 0.78);
+    transition: all 1s cubic-bezier(0.09, 0.25, 0.33, 0.78);
+}
+
+@keyframes sofa {
+    from{
+        left: -200px;
+    }
+    top{
+        left: 160px;
+    }
+}
+
+@keyframes lamp {
+    from{
+        right: -170px;
+    }
+    top{
+        right: 192px;
+    }
+}
+
+@keyframes vase {
+    from{
+        bottom: -30px;
+    }
+    top{
+        bottom:8px;
+    }
+} */

@@ -1,113 +1,157 @@
-import Image from 'next/image'
+"use client";
+
+import "tailwindcss/tailwind.css";
+import Image from "next/image";
+import HeroSection from "@/components/heroSection";
+import sofa from "../assest/image1.png";
+import lamp from "../assest/lamp1.png";
+import Table from "../assest/table1.png";
+import vase from "../assest/vase.png";
+import Sofas from "../assest/Sofas.jpeg";
+import Sectionals from "../assest/Sectionals.png";
+import Tables from "../assest/Tables.png";
+import Modular from "../assest/Modular.png";
+import chairs2 from "../assest/chairs2.jpg";
+import Benches from "../assest/Benches.png";
+import Ottomas from "../assest/Ottomas.jpg";
+import Outdoor from "../assest/Outdoor.jpg";
+import Footer from "@/components/footer";
+
+import "./Home.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import "aos/dist/aos.js";
+import {BsArrowRight} from "react-icons/bs"
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    Aos.init({
+        easing: "ease-out",
+        duration: 600,
+        once: false,
+    });
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+    const imagesOfCategory = [
+        {
+            image: Sectionals,
+            caption: "Sectionals",
+        },
+        {
+            image: Sofas,
+            caption: "Sofas",
+        },
+        {
+            image: Modular,
+            caption: "Modular",
+        },
+        {
+            image: chairs2,
+            caption: "Chairs",
+        },
+        {
+            image: Outdoor,
+            caption: "Outdoor",
+        },
+        {
+            image: Tables,
+            caption: "Tables",
+        },
+        {
+            image: Ottomas,
+            caption: "Ottomans",
+        },
+        {
+            image: Benches,
+            caption: "Benches",
+        },
+    ];
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    return (
+        <main>
+            <HeroSection />
+            <div className="my-14 w-full flex flex-col gap-10  items-center ">
+                <span className="text-5xl p-10 text-brown">
+                    {" "}
+                    Innovative Furniture Design !
+                </span>
+                <div className="w-3/4  relative" id="background">
+                    <Image
+                        src={sofa}
+                        data-aos="fade-right"
+                        id="sofa"
+                        className="absolute  left-40 top-72"
+                        width={650}
+                        height={270}
+                        alt=""
+                    />
+                    <Image
+                        src={lamp}
+                        id="lamp"
+                        data-aos="fade-left"
+                        className="absolute right-48 top-32"
+                        width={200}
+                        height={300}
+                        alt=""
+                    />
+                    <Image
+                        src={vase}
+                        id="vase"
+                        data-aos="fade-up"
+                        className="absolute right-64 bottom-2"
+                        width={280}
+                        height={300}
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div className="my-14 w-full flex flex-col gap-10  items-center ">
+                <span className="text-5xl p-6 text-brown">Categories</span>
+                <div className="w-3/4 grid grid-rows-2 grid-flow-col gap-6 ">
+                    {imagesOfCategory.map((ele) => {
+                        return <div className="flex flex-col w-64 gap-6 " key={imagesOfCategory.indexOf(ele)}>
+                                <div className=" h-56 overflow-hidden">
+                                    <Image
+                                        src={ele.image}
+                                        width={256}
+                                        objectFit="cover"
+                                        alt={ele.caption}
+                                    />
+                                </div>
+                                <span className="ml-4 text-lg opacity-50 flex flex-row items-center gap-2 transition-all ease-in-out delay-400  hover:gap-4 " > <span> {ele.caption} </span> <span> <BsArrowRight/></span></span>
+                            </div>
+                        ;
+                    })}
+                </div>
+            </div>
+            <div className="w-full flex flex-col gap-9 items-center mb-14">
+                <span className="text-4xl p-10 text-brown border-2-b-DarkBrown  ">
+                    Our Offer
+                </span>
+                <p className="text-xl w-3/4 ">
+                    Discover incredible offers and unbeatable discounts on
+                    exquisite{" "}
+                    <span className="text-brown">canvas and wood</span>{" "}
+                    furniture pieces. We take pride in providing a diverse
+                    selection of top-notch furniture and home decor products,
+                    tailored to your preferences. Whether you're searching for a
+                    captivating canvas sofa, a sturdy wooden dining table, a
+                    luxurious bedroom set, or any other furniture item, our
+                    collection has something to complement your style and
+                    accommodate your budget. Our dedicated team of experts
+                    tirelessly curates the latest trends and ensures that each
+                    product meets our stringent quality standards. We are
+                    committed to offering affordability without compromising on
+                    the excellence of our merchandise. Don't miss out on the
+                    chance to transform your living space into a haven of
+                    comfort and style. Take advantage of these incredible offers
+                    now and embark on the journey of crafting your dream home!
+                    Shop with us today and unlock a world of possibilities for
+                    your home decor and furniture needs.
+                </p>
+            </div>
+            <Footer/>
+        </main>
+    );
 }
+
