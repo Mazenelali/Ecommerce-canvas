@@ -9,7 +9,7 @@ import { useEffect, useState ,useRef } from "react";
 export const NavBar = () => {
     const link = [
         {
-            linkTo: "/",
+            linkTo: "/News",
             title: "New",
         },
         {
