@@ -12,16 +12,16 @@ function HeroSection() {
     ];
 
     return (
-        <header className="w-full h-3/4 flex justify-center mt-6">
+        <header className=" md:w-full md:h-3/4 md:flex md:justify-center md:mt-6">
             <div
                 id="carousel-content"
-                className="border-double border-4  border-DarkBrown relative"
+                className="h-96 md:h-3/4 border-y-2 border-brown"
             >
                 <div id="carousels">
                     {image.map((ele) => {
                         return (
                             <div
-                                className="w-screen h-screen"
+                                className="w-screen py-2 h-96 md:h-screen"
                                 key={image.indexOf(ele)}
                             >
                                 <Image
