@@ -114,10 +114,10 @@ export default function Home() {
                 <div className="w-3/4 gap-5 flex flex-wrap">
                     {imagesOfCategory.map((ele) => (
                         <div
-                            className="max-sm:w-60 gap-5 mx-auto md:basis-[23%]"
+                            className="w-32  md:w-60 gap-5 mx-auto md:basis-[23%]"
                             key={imagesOfCategory.indexOf(ele)}
                         >
-                            <div className=" h-56 overflow-hidden">
+                            <div className=" h-36 md:h-56 overflow-hidden">
                                 <Image
                                     src={ele.image}
                                     width={256}
