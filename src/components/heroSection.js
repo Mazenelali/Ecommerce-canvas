@@ -21,15 +21,18 @@ function HeroSection() {
                     {image.map((ele) => {
                         return (
                             <div
-                                className="w-screen h-3/4"
+                                className="w-screen h-screen"
                                 key={image.indexOf(ele)}
                             >
                                 <Image
+                                    className="w-full h-full"
                                     src={ele}
                                     key={image.indexOf(ele)}
-                                    layout="responsive"
-                                    width={1000}
-                                    height={750}
+                                    // style={{ aspectRatio: "3/2" }}
+                                    width={1980}
+                                    height={1000}
+                                    objectFit="cover"
+                                    objectPosition="bottom"
                                     alt=""
                                 />
                             </div>
@@ -37,10 +40,10 @@ function HeroSection() {
                     })}
                 </div>
             </div>
-            <p className="text-white w-1/2 text-7xl absolute top-3/4 left-60 font-light">
+            {/* <p className="text-white w-1/2 text-7xl absolute top-3/4 left-60 font-light">
                 Your <span className="text-brown">Stylish Furniture</span>{" "}
                 Marketplace
-            </p>
+            </p> */}
         </header>
     );
 }
