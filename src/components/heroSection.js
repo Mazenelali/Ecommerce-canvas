@@ -38,10 +38,10 @@ function HeroSection() {
                     })}
                 </div>
             </div>
-            {/* <p className="text-white w-1/2 text-7xl absolute top-3/4 left-60 font-light">
+            <p className="w-60 top-80 left-10 text-2xl  text-white md:w-1/2 md:text-7xl absolute md:top-3/4 md:left-60 font-light">
                 Your <span className="text-brown">Stylish Furniture</span>{" "}
                 Marketplace
-            </p> */}
+            </p>
         </header>
     );
 }
