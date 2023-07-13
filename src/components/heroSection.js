@@ -31,8 +31,6 @@ function HeroSection() {
                                     // style={{ aspectRatio: "3/2" }}
                                     width={1980}
                                     height={1000}
-                                    objectFit="cover"
-                                    objectPosition="bottom"
                                     alt=""
                                 />
                             </div>

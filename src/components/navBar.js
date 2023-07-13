@@ -4,7 +4,7 @@ import Link from "next/link";
 import canvaslogo from "../assest/canvaslogo.png";
 import Image from "next/image";
 import { SlArrowDown } from "react-icons/sl";
-import { useState } from "react";
+import { useEffect, useState ,useRef } from "react";
 
 export const NavBar = () => {
     const link = [
@@ -36,11 +36,20 @@ export const NavBar = () => {
         setVisible(!visible);
     };
 
-    let ScreenWidth = window.screen.width;
+    const [windowSize ,setWindowsSize] = useState(null)  ;
+
+    useEffect(() => {
+        const updateWindowSize = () => {
+            setWindowsSize(window.screen.width);
+        };
+
+        updateWindowSize(); 
+    }, []);
+
 
     return (
         <nav className="w-full">
-            {ScreenWidth < 420 ? (
+            {windowSize < 420 ? (
                 <>
                     <nav className="h-16 z-10 bg-brown flex  relative space-x-64 items-center justify-center ">
                         <div className="w-10 h-10 bg-white">
@@ -59,7 +68,7 @@ export const NavBar = () => {
                             }}
                         >
                             <input
-                                class="menu-icon__cheeckbox"
+                                className="menu-icon__cheeckbox"
                                 type="checkbox"
                             />
                             <div>
