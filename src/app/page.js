@@ -23,6 +23,7 @@ import "aos/dist/aos.css";
 import "aos/dist/aos.js";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
+import { LuShoppingCart } from "react-icons/lu";
 
 export default function Home() {
     useEffect(() => {
@@ -68,6 +69,54 @@ export default function Home() {
         },
     ];
 
+    const promotionProduct = [
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+        {
+            image: "https://wisteria.com/cdn/shop/products/182-111410-11_900x.jpg?v=1679411016",
+            description: "Saville Sleeper Sofa",
+            price: "250",
+        },
+    ];
+
     return (
         <main className="max-w-screen overflow-hidden">
             <HeroSection />
@@ -110,7 +159,9 @@ export default function Home() {
                 </div>
             </div>
             <div className="my-14 w-screen flex flex-col justify-center gap-5  items-center ">
-                <span className=" text-2xl p-6 text-brown md:text-5xl ">Categories</span>
+                <span className=" text-2xl p-6 text-brown md:text-5xl ">
+                    Categories
+                </span>
                 <div className="w-3/4 gap-5 flex flex-wrap">
                     {imagesOfCategory.map((ele) => (
                         <div
@@ -134,6 +185,44 @@ export default function Home() {
                             </span>
                         </div>
                     ))}
+                </div>
+            </div>
+            <div className="w-full flex flex-col mt-10 md:mt-20 gap-4 md:gap-20 items-center">
+                <span className="flex items-center gap-1 flex-col">
+                    <span className="text-xl md:text-4xl text-brown"> PROMOTION ITEMS</span>{" "}
+                    <span className="text-sm md:text-xl text-DarkBrown">
+                        Check out our latest collections
+                    </span>
+                </span>
+                <div className="w-[[80%]] flex flex-wrap justify-center gap-x-2 gap-y-4  md:gap-x-40 md:gap-y-20  p-2">
+                    {promotionProduct.map(({image , description ,price} , index)=>{
+                        
+                     return <div key={promotionProduct.indexOf(index)} className="w-36 h-48  overflow-hidden md:w-72 md:h-96  border-brown border">
+                        <div className="h-36 md:h-72 w-[[99%]] ">
+                            <Image
+                                className="w-full  h-full"
+                                src={
+                                    image
+                                }
+                                width={160}
+                                height={160}
+                                alt=""
+                            />
+                        </div>
+                        <article className="p-2 md:p-4 relative inline-flex flex-col gap-1">
+                            <span className="text-xs md:text-xl">
+                                {description}
+                            </span>
+                            <span className="text-xs md:text-xl text-DarkBrown">
+                                {price} $
+                            </span>
+                            <span className=" absolute w-14 h-32  md:w-32 md:h-64 rotate-45 -bottom-16 md:-bottom-32  -right-20 md:-right-48 bg-brown transition-all flex justify-center items-end   hover:-translate-x-8 -translate-y-8 hover:md:-translate-x-12 ">
+                                {" "}
+                                <LuShoppingCart className="text-DarkBrown mb-8 md:mb-20 md:mr-12 md:text-4xl mr-4  text-2xl -rotate-45" />{" "}
+                            </span>
+                        </article>
+                    </div>
+                    })}
                 </div>
             </div>
             <div className="w-full flex flex-col gap-9 items-center mb-14 sm:gap-0">
